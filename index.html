@@ -8,61 +8,67 @@
         body { font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; padding: 20px; max-width: 900px; margin: auto; color: #d1d1d1; background-color: #0f0f0f; }
         .container { background: #1a1a1a; padding: 40px; border-radius: 15px; border: 1px solid #333; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
         h1 { color: #00ffff; border-bottom: 2px solid #00ffff; padding-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; }
-        h2 { color: #00ffff; margin-top: 30px; font-size: 1.4em; }
+        h2 { color: #00ffff; margin-top: 30px; font-size: 1.4em; border-left: 4px solid #00ffff; padding-left: 15px; }
         p, li { color: #bbbbbb; font-size: 1.05em; }
         .date { color: #666; font-style: italic; margin-bottom: 30px; }
         ul { padding-left: 20px; }
         a { color: #00ffff; text-decoration: none; }
         a:hover { text-decoration: underline; }
         .highlight { color: #fff; font-weight: bold; }
+        .section-box { background: #222; padding: 15px; border-radius: 8px; margin-top: 10px; }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Privacy Policy</h1>
-        <p class="date">Last Updated: April 14, 2026</p>
+        <p class="date">Last Updated: April 15, 2026</p>
 
-        <p>This Privacy Policy describes how <span class="highlight">Scanner Pro Master</span> collects, uses, and shares information when you use our mobile application. We are committed to protecting your privacy and ensuring a secure user experience.</p>
+        <p>This Privacy Policy describes how <span class="highlight">Scanner Pro Master</span> ("we", "our", or "the App") collects, uses, and protects your information. By using the App, you agree to the terms outlined in this policy.</p>
 
-        <h2>1. Data Collection and Usage</h2>
-        <p>To provide a high-quality experience, we use several integrated services:</p>
+        <h2>1. Data Collection & Local Storage</h2>
+        <div class="section-box">
+            <p>We prioritize your privacy by keeping your data where it belongs: <strong>on your device.</strong></p>
+            <ul>
+                <li><span class="highlight">Scan History:</span> All decoded QR and Barcode data is stored in a local SQLite database on your device. We do not transmit, store, or have access to your scan history.</li>
+                <li><span class="highlight">Manual Deletion:</span> Users can delete their entire history or individual records at any time through the "History" section.</li>
+            </ul>
+        </div>
+
+        <h2>2. Firebase & Technical Services</h2>
+        <p>To ensure application stability and manage updates, we use <span class="highlight">Google Firebase</span> services:</p>
         <ul>
-            <li><span class="highlight">Local Storage:</span> Your scan history and custom QR data are stored <strong>only</strong> on your device's internal database. We do not have access to your personal scans.</li>
-            <li><span class="highlight">Firebase (Google):</span> We use Firebase for backend analytics, crash reporting, and cloud messaging. This helps us monitor app performance and fix bugs in real-time.</li>
-            <li><span class="highlight">Device Information:</span> We may collect non-personal data such as device model, OS version, and language settings to optimize app performance.</li>
+            <li><strong>Remote Config:</strong> Used to manage mandatory version updates and system notifications. This allows us to ensure all users are on a secure, compatible version (including Android 15 optimizations).</li>
+            <li><strong>Crashlytics:</strong> Collects anonymous crash reports (e.g., stack traces, device model, OS version) to fix technical bugs.</li>
+            <li><strong>Analytics:</strong> Collects non-personally identifiable information (country, session duration) to improve user experience.</li>
         </ul>
 
-        <h2>2. Use of Firebase Services</h2>
-        <p>Our application utilizes Firebase for the following purposes:</p>
+        <h2>3. Advertising & User Consent (GDPR/UMP)</h2>
+        <p>We use <span class="highlight">Google AdMob</span> to serve ads, which helps keep the App free. In compliance with European and international regulations:</p>
         <ul>
-            <li><strong>Analytics:</strong> To understand user behavior and improve feature accessibility.</li>
-            <li><strong>Crashlytics:</strong> To identify technical issues and ensure application stability.</li>
-            <li><strong>Remote Config:</strong> To update app behavior and appearance without requiring a new download.</li>
+            <li><strong>Consent Management:</strong> We use the Google UMP (User Messaging Platform) to ask for your permission regarding personalized advertising.</li>
+            <li><strong>IDFA/AAID:</strong> With your consent, AdMob may use your device's advertising identifier to show relevant ads. You can reset these identifiers in your Android/iOS system settings.</li>
         </ul>
 
-        <h2>3. Advertising & Third-Party SDKs</h2>
-        <p>We use <span class="highlight">Google AdMob</span> to serve advertisements. AdMob may use device identifiers (IDFA/AAID) to provide personalized ads. You can manage your ad preferences or opt-out through your device's system settings.</p>
-
-        <h2>4. Permissions Required</h2>
+        <h2>4. Camera & Storage Permissions</h2>
+        <p>The App requires specific permissions to function correctly:</p>
         <ul>
-            <li><strong>Camera:</strong> To scan and decode QR/Barcodes.</li>
-            <li><strong>Storage:</strong> To save generated QR codes as images and access gallery for scanning.</li>
-            <li><strong>Internet:</strong> To sync with Firebase and load advertisements.</li>
+            <li><strong>Camera:</strong> Strictly used for scanning codes. No photos or videos are recorded or transmitted.</li>
+            <li><strong>Storage (Media):</strong> Required only for saving generated QR codes to your gallery or scanning images from your device.</li>
+            <li><strong>Network:</strong> Used to load advertisements and fetch mandatory update information from Firebase.</li>
         </ul>
 
-        <h2>5. GDPR & CCPA Compliance</h2>
-        <p>Under global data protection laws, you have the right to:</p>
-        <ul>
-            <li>Access the data stored on your device.</li>
-            <li>Delete all local data by clearing app cache or uninstalling the app.</li>
-            <li>Opt-out of personalized tracking via OS-level privacy settings.</li>
-        </ul>
+        <h2>5. Android 15 & System Integrity</h2>
+        <p>Scanner Pro Master is fully optimized for <span class="highlight">Android 15</span>, including support for 16 KB memory architecture. We do not bypass any system security features and respect all OS-level privacy sandboxes.</p>
 
-        <h2>6. Data Security</h2>
-        <p>We implement industry-standard security measures to protect your data. However, since most data is stored locally, the security of your device is your primary responsibility.</p>
+        <h2>6. Data Security & Retention</h2>
+        <p>Since your personal data (scans) is stored locally, its security depends on your device's security. If you uninstall the App or clear its data, all locally stored history will be <strong>permanently deleted</strong> and cannot be recovered by us.</p>
 
-        <h2>7. Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, you can reach us through our GitHub repository or official developer contact: <a href="https://github.com/trabzonaabdullah-maker/scanner--app-policiy">Support Link</a></p>
+        <h2>7. Updates to This Policy</h2>
+        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by updating the "Last Updated" date at the top of this page. Major changes may be announced via App notifications through Remote Config.</p>
+
+        <h2>8. Contact & Support</h2>
+        <p>For questions, data requests, or technical support, please contact us via our official GitHub repository:</p>
+        <p><a href="https://github.com/trabzonaabdullah-maker/scanner--app-policiy">Official Support & Documentation</a></p>
     </div>
 </body>
 </html>
